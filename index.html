@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Pesquisa de Lazer e Consumo Cultural</title>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+body {
+font-family: Arial, sans-serif;
+margin: 20px;
+background: #f4f4f4;
+}
+
+h1 {
+color: #333;
+}
+
+.box {
+background: white;
+padding: 15px;
+border-radius: 10px;
+margin-bottom: 20px;
+}
+
+iframe {
+width: 100%;
+height: 800px;
+border: none;
+}
+
+canvas {
+max-width: 600px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+<h1>Pesquisa de Lazer e Consumo Cultural</h1>
+<p>Responda o formulário abaixo:</p>
+
+<iframe
+src="https://docs.google.com/forms/d/e/1FAIpQLSdeeidSUf6oTNYnWaviXaoPdwvY0TyWfbXGD53YWgWDDQAjTg/viewform?embedded=true">
+</iframe>
+</div>
+
+<div class="box">
+<h2>📊 Gráfico dos Resultados</h2>
+
+<canvas id="grafico"></canvas>
+
+<script>
+const ctx = document.getElementById('grafico');
+
+new Chart(ctx, {
+type: 'bar',
+data: {
+labels: ['Cinema', 'Música', 'Esporte', 'Jogos', 'Leitura'],
+datasets: [{
+label: 'Preferências dos jovens',
+data: [10, 8, 6, 12, 4],
+borderWidth: 1
+}]
+}
+});
+</script>
+</div>
+
+</body>
+</html>
+
